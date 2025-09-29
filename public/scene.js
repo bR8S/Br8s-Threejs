@@ -1,16 +1,26 @@
-import * as THREE from '/build/three.module.js';
-import {OrbitControls} from '/jsm/controls/OrbitControls.js';
-import {GLTFLoader} from '/jsm/loaders/GLTFLoader.js';
-import {EffectComposer} from '/jsm/postprocessing/EffectComposer.js'
-import {RenderPass} from '/jsm/postprocessing/RenderPass.js'
-import { GlitchPass } from '/jsm/postprocessing/GlitchPass.js';
-import { UnrealBloomPass } from '/jsm/postprocessing/UnrealBloomPass.js';
-import { DotScreenPass} from '/jsm/postprocessing/DotScreenPass.js';
-import { FilmPass} from '/jsm/postprocessing/FilmPass.js';
-import { RGBShiftShader } from './jsm/shaders/RGBShiftShader.js';
-import { DotScreenShader } from './jsm/shaders/DotScreenShader.js';
-import { ShaderPass } from './jsm/postprocessing/ShaderPass.js';
-import { LuminosityShader } from '/jsm/shaders/LuminosityShader.js'
+// Core Three.js
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js';
+
+// Controls
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/controls/OrbitControls.js';
+
+// Loaders
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/loaders/GLTFLoader.js';
+
+// Postprocessing
+import { EffectComposer } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/postprocessing/RenderPass.js';
+import { GlitchPass } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/postprocessing/GlitchPass.js';
+import { UnrealBloomPass } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/postprocessing/UnrealBloomPass.js';
+import { DotScreenPass } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/postprocessing/DotScreenPass.js';
+import { FilmPass } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/postprocessing/FilmPass.js';
+import { ShaderPass } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/postprocessing/ShaderPass.js';
+
+// Shaders
+import { RGBShiftShader } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/shaders/RGBShiftShader.js';
+import { DotScreenShader } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/shaders/DotScreenShader.js';
+import { LuminosityShader } from 'https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/shaders/LuminosityShader.js';
+
 
         var scene, camera, composer, hemiLight, light, object, object1, object2, br8s, mesh;
         var renderer;
