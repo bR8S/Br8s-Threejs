@@ -24,10 +24,7 @@ import { LuminosityShader } from '/jsm/shaders/LuminosityShader.js'
 
             const loadingManager = new THREE.LoadingManager(() => {
                 document.querySelector('.loading-wrapper').classList.add('fade-out');
-
                 document.querySelector('.loading-wrapper').addEventListener('transitionend', onTransitionEnd);
-                //document.querySelector('.loading-wrapper').parentElement.removeChild(document.querySelector('.loading-wrapper'));
-
             });
 
             scene.fog = new THREE.Fog( 0x000000, 300, 30000 );
@@ -57,7 +54,7 @@ import { LuminosityShader } from '/jsm/shaders/LuminosityShader.js'
             composer = new EffectComposer(renderer);
             composer.addPass(new RenderPass(scene, camera));
 
-            composer.addPass(new GlitchPass());
+            //composer.addPass(new GlitchPass());
             composer.addPass(new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 ));
             composer.addPass(new FilmPass(0.1, 0.325, 256, false));
 
